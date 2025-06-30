@@ -118,17 +118,11 @@ document.addEventListener('DOMContentLoaded', function() {
   const animatedElements = document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right, .scale-in, .stagger-parent');
   animatedElements.forEach(el => observer.observe(el));
 
-  // Add animation classes to elements
-  document.querySelectorAll('.about-card').forEach(card => {
-    card.classList.add('fade-in', 'stagger-item');
-  });
-
-  document.querySelectorAll('.team-member').forEach(member => {
-    member.classList.add('scale-in', 'stagger-item');
-  });
-
-  document.querySelectorAll('.project-card').forEach(project => {
-    project.classList.add('fade-in', 'stagger-item');
+  // Make sure all elements are visible by default and add animation classes only if needed
+  // Force visibility for critical sections
+  document.querySelectorAll('.about-description, .about-stats, .team-member, .project-card').forEach(element => {
+    element.style.opacity = '1';
+    element.style.transform = 'none';
   });
 
   document.querySelectorAll('.event-card').forEach(event => {
@@ -191,6 +185,27 @@ document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('.cta-button, .submit-btn').forEach(btn => {
     btn.classList.add('glow');
   });
+
+  // Horizontal scroll for team and projects sections
+  const addHorizontalScroll = (container) => {
+    container.addEventListener('wheel', (e) => {
+      if (e.deltaY !== 0) {
+        e.preventDefault();
+        container.scrollLeft += e.deltaY;
+      }
+    });
+  };
+
+  const teamScroll = document.querySelector('.team-scroll');
+  const projectsScroll = document.querySelector('.projects-scroll');
+  
+  if (teamScroll) {
+    addHorizontalScroll(teamScroll);
+  }
+  
+  if (projectsScroll) {
+    addHorizontalScroll(projectsScroll);
+  }
 
   // Typing effect for hero title (optional)
   const heroTitle = document.querySelector('.hero-title');
