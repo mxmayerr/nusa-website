@@ -322,6 +322,21 @@ body {
 }
 
 /* Team Section */
+.team-category {
+  margin-bottom: 60px;
+}
+
+.team-category:last-child {
+  margin-bottom: 0;
+}
+
+.team-category-title {
+  font-size: 2rem;
+  color: var(--accent-sage);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
 .team-scroll-container {
   position: relative;
   overflow: hidden;
@@ -587,6 +602,10 @@ body {
 }
 
 /* Events Section */
+.events {
+  background-color: var(--dark-gray);
+}
+
 .events-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -623,13 +642,22 @@ body {
 .upcoming-topics li {
   padding: 10px 0;
   color: var(--text-gray);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   transition: var(--transition);
+  padding-left: 20px;
+  position: relative;
+}
+
+.upcoming-topics li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--accent-red);
 }
 
 .upcoming-topics li:hover {
   color: var(--text-white);
-  padding-left: 10px;
+  padding-left: 25px;
 }
 
 .events-calendar {
@@ -642,9 +670,9 @@ body {
   display: flex;
   gap: 20px;
   padding: 20px;
-  background-color: var(--card-bg);
+  background-color: rgba(0, 0, 0, 0.4);
   border-radius: 10px;
-  border: 1px solid rgba(219, 236, 192, 0.1);
+  border: 1px solid rgba(219, 236, 192, 0.2);
   transition: var(--transition);
 }
 
@@ -1072,6 +1100,48 @@ body {
   color: var(--accent-red);
 }
 
+/* Page Hero Sections */
+.page-hero {
+  padding: 120px 0 60px;
+  background-color: var(--dark-gray);
+  text-align: center;
+}
+
+.page-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+}
+
+.page-subtitle {
+  font-size: 1.3rem;
+  color: var(--text-gray);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Projects Page Grid */
+.projects-grid-page {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.project-card-page {
+  background-color: var(--card-bg);
+  border-radius: 15px;
+  border: 1px solid rgba(219, 236, 192, 0.1);
+  transition: var(--transition);
+  overflow: hidden;
+}
+
+.project-card-page:hover {
+  transform: translateY(-8px);
+  border-color: var(--accent-red);
+  box-shadow: 0 15px 40px rgba(195, 1, 0, 0.2);
+}
+
 /* Ensure critical sections are always visible */
 .about-description,
 .about-stats,
@@ -1151,6 +1221,22 @@ body {
   
   .page-subtitle {
     font-size: 1.1rem;
+  }
+  
+  .team-category-title {
+    font-size: 1.5rem;
+  }
+  
+  .team-category {
+    margin-bottom: 40px;
+  }
+  
+  .projects-grid-page {
+    grid-template-columns: 1fr;
+  }
+  
+  .project-card-page {
+    max-width: 100%;
   }
   
   .events-content {
