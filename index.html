@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Northeastern Systematic Alpha</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="container header-content">
+      <div class="logo">
+        <!-- desktop logo always shown above 768px -->
+        <img src="nusa-bannar.png" alt="NUSA Logo" id="desktop-logo" class="logo-img" />
+        <!-- mobile logo only under 768px -->
+        <img src="nusa-square.png" alt="NUSA Square Logo" id="mobile-logo" class="logo-img" />
+      </div>
+      <div class="hamburger" id="hamburger">&#9776;</div>
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-links">
+          <li><a href="about.html">Who We Are</a></li>
+          <li><a href="eboard.html">Executives</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a href="apply.html" class="header-apply-btn">Apply</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content container">
+        <h1>Northeastern University's Premier Quantitative Finance Group.</h1>
+        <form class="email-signup" onsubmit="event.preventDefault();">
+          <input type="email" placeholder="<personal_email>" required />
+          <button type="submit">Keep me Updated</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
