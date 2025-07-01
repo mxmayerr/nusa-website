@@ -189,24 +189,11 @@ body {
 
 .hero-actions {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
+  gap: 20px;
   margin-bottom: 20px;
-}
-
-.hero-divider {
-  position: relative;
-  color: var(--text-gray);
-  font-size: 1rem;
-  font-weight: 500;
-}
-
-.hero-divider span {
-  position: relative;
-  padding: 0 15px;
-  background-color: transparent;
 }
 
 .hero-apply-btn {
@@ -1255,14 +1242,6 @@ body {
     font-size: 1.2rem;
   }
   
-  .hero-actions {
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  .hero-divider {
-    display: none;
-  }
   
   .email-input {
     width: 200px;
