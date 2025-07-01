@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
           formMessage.textContent = 'Thank you for subscribing! We\'ll keep you updated.';
           formMessage.className = 'form-message success';
           emailForm.reset();
-          submitBtn.innerHTML = 'Keep Me Updated';
+          submitBtn.innerHTML = 'Join Newsletter';
           submitBtn.disabled = false;
           
           // Clear message after 5 seconds
@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function() {
       } catch (error) {
         formMessage.textContent = 'Something went wrong. Please try again.';
         formMessage.className = 'form-message error';
-        submitBtn.innerHTML = 'Keep Me Updated';
+        submitBtn.innerHTML = 'Join Newsletter';
         submitBtn.disabled = false;
       }
     });
