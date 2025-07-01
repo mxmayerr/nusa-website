@@ -355,6 +355,10 @@ body {
 }
 
 /* Team Section */
+.team {
+  background-color: var(--dark-gray);
+}
+
 .team-category {
   margin-bottom: 60px;
 }
