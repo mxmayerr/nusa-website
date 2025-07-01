@@ -187,6 +187,54 @@ body {
   font-weight: 300;
 }
 
+.hero-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.hero-divider {
+  position: relative;
+  color: var(--text-gray);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.hero-divider span {
+  position: relative;
+  padding: 0 15px;
+  background-color: transparent;
+}
+
+.hero-apply-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--accent-red);
+  color: var(--text-white);
+  padding: 18px 40px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: var(--transition);
+  border: 2px solid var(--accent-red);
+}
+
+.hero-apply-btn:hover {
+  background-color: transparent;
+  color: var(--accent-red);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(195, 1, 0, 0.3);
+}
+
+.hero-apply-btn i {
+  font-size: 1.2rem;
+}
+
 .email-signup {
   display: inline-flex;
   gap: 0;
@@ -1207,8 +1255,22 @@ body {
     font-size: 1.2rem;
   }
   
+  .hero-actions {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .hero-divider {
+    display: none;
+  }
+  
   .email-input {
     width: 200px;
+  }
+  
+  .hero-apply-btn {
+    padding: 15px 30px;
+    font-size: 1rem;
   }
   
   .section-title {
