@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
   <nav class="navbar" id="navbar">
     <div class="container">
@@ -62,8 +64,13 @@
   <section class="about-brief section-padding">
     <div class="container">
       <div class="about-brief-content">
-        <h2 class="section-title">About <span class="accent-text">NUSA</span></h2>        <p class="about-brief-text">
-          NUSA is Northeastern University's premier quantitative finance club, bridging the gap between academic theory and real-world financial markets. Our research teams conduct quantitative research, develop trading algorithms, and explore cutting-edge applications of mathematics, statistics, and computer science in finance. Our members gain hands-on experience with industry tools while building a strong foundation in quantitative methods, risk management, and systematic trading strategies.
+        <h2 class="section-title">About <span class="accent-text">NUSA</span></h2>
+        <p class="about-brief-text">
+          NUSA is Northeastern University's premier quantitative finance club, bridging the gap between academic theory
+          and real-world financial markets. Our research teams conduct quantitative research, develop trading
+          algorithms, and explore cutting-edge applications of mathematics, statistics, and computer science in finance.
+          Our members gain hands-on experience with industry tools while building a strong foundation in quantitative
+          methods, risk management, and systematic trading strategies.
         </p>
         <div class="about-brief-highlights">
           <div class="highlight-item">
@@ -72,9 +79,9 @@
             <p>Develop and backtest trading strategies using real market data to find real alpha.</p>
           </div>
           <div class="highlight-item">
-            <i class="fas fa-code"></i>
-            <h3>Technical Skills</h3>
-            <p>Master Python with industry-standard quantitative tools and methods.</p>
+            <i class="fas fa-laptop-code"></i>
+            <h3>Quantitative Development</h3>
+            <p>Build robust data pipelines, backtesting frameworks, and execution systems that power our research.</p>
           </div>
           <div class="highlight-item">
             <i class="fas fa-users"></i>
@@ -93,7 +100,8 @@
           Talent <span class="accent-text">Drives Everything We Do</span>
         </h2>
         <p class="about-brief-text">
-          At NUSA, we believe our members are our greatest strength. If you're intellectually curious, technically driven, and passionate about markets, we want you on our team.
+          At NUSA, we believe our members are our greatest strength. If you're intellectually curious, technically
+          driven, and passionate about markets, we want you on our team.
         </p>
         <a href="apply.html" class="hero-apply-btn">
           Join Us
@@ -103,46 +111,17 @@
   </section>
 
 
-  <footer id="contact" class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-brand">
-          <img src="images/nusa-square.png" alt="NUSA Logo" class="footer-logo">
-          <p>Northeastern University Systematic Alpha</p>
-        </div>
-        <div class="footer-links">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="about.html">About</a></li>
-            <li><a href="team.html">Team</a></li>
-            <li><a href="events.html">Events</a></li>
-          </ul>
-        </div>
-        <div class="footer-contact">
-          <h4>Connect With Us</h4>
-          <p>Email: nusystematicalpha@gmail.com</p>
-          <div class="social-icons">
-            <a href="https://www.instagram.com/nusystematicalpha/" class="social-icon" aria-label="Instagram" target="_blank">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://www.facebook.com/NUSytematicAlpha/" class="social-icon" aria-label="Facebook" target="_blank">
-              <i class="fab fa-facebook"></i>
-            </a>
-            <a href="https://github.com/NU-Systematic-Alpha" class="social-icon" aria-label="GitHub" target="_blank">
-              <i class="fab fa-github"></i>
-            </a>
-            <a href="https://www.linkedin.com/company/northeastern-systematic-alpha/" class="social-icon" aria-label="LinkedIn" target="_blank">
-              <i class="fab fa-linkedin"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2024 Northeastern University Systematic Alpha. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch('footer.html')
+      .then(res => res.ok ? res.text() : Promise.reject(res.statusText))
+      .then(html => {
+        document.getElementById('footer-placeholder').innerHTML = html;
+      })
+      .catch(err => console.error('Failed to load footer:', err));
+  </script>
 
   <script src="js/main.js"></script>
 </body>
+
 </html>
